@@ -1,0 +1,60 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+#main {
+  margin-top: 75px;
+}
+
+.line-je-suis > div > div {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 160px;
+  height: 160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.line-je-suis > div {
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  width: 100%;
+  font-size: 125%;
+}
+
+.text-padding-center > div {
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.contact-page .contact-general {
+    margin-right: 10%;
+    margin-bottom: 50px;
+  }
+.contact-page .contact-form > div {
+    width: 100%;
+  }
+
+  @media screen and (orientation: portrait) {
+    .contact-page {
+      flex-wrap: wrap;
+    }
+    .contact-page .contact-general {
+      margin-top: 20px;
+      margin-right: 0px; 
+    }
+    .contact-page .contact-form > div {
+      padding: 0px 50px;
+    }
+  }
