@@ -9,35 +9,12 @@ const Principe = props => (
     <Box
       enLigne={0} /* 1 ou 0*/
       couleurFond="rgb(255,124,8)" /* code RGB */
-      image="bandeau_header_accueil.png"
+      image="bandeau_header_accueil.jpg"
       imageCover={1}
       hauteur={500}
     >
-      <Box enLigne={1} hauteur={400}> 
-        <Box
-          largeurPct={50}
-          image="Guillemets_ouvertes.png"
-          imageHaut={1}
-          imageDroite={1}
-          hauteur={250}
-        />
-        <Box
-          largeurMax={1}
-          texte="Découvrez et soutenez les projets proches de chez vous grâce aux bornes tactiles LOKALÉRO"
-          hauteur="250"
-          couleur="white"
-          complementStyle={{
-            "fontSize": "calc( 2vw + 75%)",
-            "textAlign": "center"
-          }}
-        />
-        <Box
-          largeurPct={50}
-          image="Guillemets_fermees.png"
-          imageBas={1}
-          imageGauche={1}
-          hauteur="250"
-        />
+      <Box enLigne={1} hauteur={450}> 
+        
       </Box>
       <Box enLigne={1}>
         <Box
@@ -47,6 +24,12 @@ const Principe = props => (
           bordureArrondi="5"
           padding="10px 20"
           couleurFond={green}
+          action={() => {
+            let tesNode = document.getElementById('video'); 
+            if (tesNode){
+              window.scrollTo(0, tesNode.offsetTop -75);
+            }
+          }}
         />
       </Box>
     </Box>
@@ -90,7 +73,7 @@ const Principe = props => (
           largeur={100}
           imageEntiere={1}
         />
-        <Box texte="Lokal\nprofessionel(le)" padding="5" />
+        <Box texte="Lokal\nprofessionnel(le)" padding="5" />
       </Box> 
       <Box
 

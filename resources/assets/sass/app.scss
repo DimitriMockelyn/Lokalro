@@ -58,3 +58,38 @@
       padding: 0px 50px;
     }
   }
+
+  @media screen and (min-width: 1440px) {
+    #videoFb {
+      width: 900px !important;
+      height: 510px !important; 
+    }
+  }
+
+  body {
+    background-color: white; 
+  }
+
+  .orange-medium {
+    font-size: 25px;
+    color: orange;
+  }
+
+  .detail {
+    font-size: 13px;
+  }
+
+  .row.row-modal {
+    margin-left: 30px;
+  }
+
+  .before-radios {
+    margin-bottom: 10px;
+  }
+  .double-textfield > div {
+    margin-right: 10px;
+  }
+
+  .styles_modal__gNwvD {
+    padding : 2.2em;
+  }

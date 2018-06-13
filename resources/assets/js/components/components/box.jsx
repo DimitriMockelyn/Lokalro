@@ -2,8 +2,30 @@ import React from 'react';
 import { Alert } from 'react-alert';
 
 import { withAlert } from 'react-alert';
+import Modal from 'react-responsive-modal';
+import PopupContact from '../containers/footer/popup-contact';
 
 class Box extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      open: false
+    }
+  }
+
+  onOpenModal() {
+    this.setState({ open: true });
+  }
+
+  onCloseModal(that) {
+    return function(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      that.setState({ open: false });
+    }
+  }
   computeStyle() {
     let style = {};
     if (this.props.largeurMax) {
@@ -141,7 +163,7 @@ class Box extends React.Component {
           handler = this.props.action;
           if (!handler) {
               handler = () => {
-                this.props.alert.show(<div style={{ 'textTransform': 'initial', 'width': '100%' }}>Le site est en cours de développement, et cette fonctionnalité n'est pas encore disponible :( Vous pouvez nous laissez vos coordonnées pour etre tenu au courant des évolutions, dans la rubrique "Nous contacter"</div>)
+                this.onOpenModal();
               }
           }
       }
@@ -154,6 +176,9 @@ class Box extends React.Component {
     return <div style={style} onClick={onClick} className={this.props.className || ''} >
       {this.props.texte && this.props.texte.split('\\n').map(txt => {return <div>{txt}</div>})}
       {this.props.children}
+      <Modal open={this.state.open} onClose={this.onCloseModal(this)} center>
+        <PopupContact fromAction={true} onCloseModal={this.onCloseModal(this)}/>
+        </Modal>
     </div>
   }
 };

@@ -7,7 +7,7 @@ const margeIcones = "30";
 const Principe = props => (
     <div>
     <Box padding={80} largeurMax={1} couleur='#0f5d7b' texte="La borne LOKALÉRO est en cours de développement et n'est pas encore commercialisée." complementStyle={{
-      'fontSize': '30px'
+      'fontSize': '25px'
     }}/>
     <Box couleur={orange} texte='ILS NOUS SOUTIENNENT' padding='0' margeBas={20} complementStyle={{
       'fontSize': '40px'

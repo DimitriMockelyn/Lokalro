@@ -30,7 +30,6 @@ const Principe = props => (
           "boxShadow": green + " 5px 5px 0px 0px",
           'textTransform': 'uppercase'
         }}
-        type="bouton"
         hauteur={50}
         padding="10px 50"
       />
@@ -69,7 +68,6 @@ const Principe = props => (
           "boxShadow": green + " 5px 5px 0px 0px",
           'textTransform': 'uppercase'
         }}
-        type="bouton"
         hauteur={50}
         padding="10px 50"
       />
@@ -320,7 +318,7 @@ const Principe = props => (
             imageEntiere={1}
           />
           <Box
-            texte="Professionel ou commerçant"
+            texte="Professionnel ou commerçant"
             largeurMax={1}
             couleur="#0f5d7b"
             padding="5"
@@ -430,7 +428,13 @@ const Principe = props => (
         </Box>
       </Box>
     </Box>
-    <Box margeHaut={10} texte='La borne et moi' couleur='#0f5d7b' couleurFond={green} type='bouton-maj' bordureArrondi={5} padding='15px 20'/>
+    <Box margeHaut={10} texte='La borne et moi' couleur='#0f5d7b' couleurFond={green} type='bouton-maj' bordureArrondi={5} padding='15px 20'
+    action={() => {
+      let tesNode = document.getElementById('video'); 
+      if (tesNode){
+        window.scrollTo(0, tesNode.offsetTop -75);
+      }
+    }}/>
   </Box>
     </div>
 );

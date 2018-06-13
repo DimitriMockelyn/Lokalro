@@ -4,8 +4,19 @@ import Box from "../../../components/box";
 import { green, orange } from "../../../components/colors";
 const margeIcones = "30";  
 
-const Principe = props => (
-    <div style={{    'align-items': 'center',
+class Principe extends React.Component {
+  componentDidMount() {
+    if (window.location.href === window.location.origin+'/#video') {
+      history.pushState({}, null, window.location.origin+'/');
+      let tesNode = document.getElementById('video'); 
+      if (tesNode){
+        window.scrollTo(0, tesNode.offsetTop -75);
+      }
+    }
+  }
+   render() {
+     return (
+    <div id='video' style={{    'align-items': 'center',
       'display': 'flex',
       'flex-direction': 'column'}}>
     <Box
@@ -17,15 +28,8 @@ const Principe = props => (
       "fontSize": "30px"
     }}
   />
-  <iframe 
-    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Flokalero%2Fvideos%2F1919131194772622%2F&show_text=0&width=560" 
-    width="560" 
-    height="315" 
-    style={{'border':'none','overflow':'hidden'}}
-    scrolling="no" 
-    frameborder="0" 
-    allowTransparency="true" 
-    allowFullScreen="true"></iframe>
+
+    <iframe width="560" height="315" id='videoFb' src="https://www.youtube.com/embed/7K7lpTWMWQs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   <Box largeurMax={1} enLigne={1} margeHaut={20} margeBas={20} hauteur={50}>
     <Box
       type="bouton-maj"
@@ -51,7 +55,8 @@ const Principe = props => (
     />
   </Box> 
     </div>
-);
+      )}
+};
 
 
 export default Principe;

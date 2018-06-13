@@ -106,6 +106,7 @@ class Contact extends React.Component {
           image='Bandeau - Nous contacter.png'
           hauteur={230} 
           imageHorPct='30'
+          imageCover={1}
           />
           <Box enLigne={1} className='contact-page'>
           <Box largeurMax={1} gauche={1} hauteurMax={1} className='contact-form'>

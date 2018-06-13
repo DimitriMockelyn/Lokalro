@@ -56,6 +56,14 @@ class Header extends React.Component {
           type='bouton-maj'
           couleur={orangee}
           texte='La borne Lokaléro'
+          action={() => {
+            let tesNode = document.getElementById('video'); 
+            if (tesNode){
+              window.scrollTo(0, tesNode.offsetTop -75);
+            } else {
+              window.location.href = window.location.origin+'/#video';
+            }
+          }}
         />
         <Box 
           type='bouton-maj'
